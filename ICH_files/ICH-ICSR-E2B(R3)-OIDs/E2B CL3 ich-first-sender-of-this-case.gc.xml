@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Mod Crane-gc2html.xsl"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/codelist/ns/genericode/1.0/ genericode.xsd" xmlns:html='http://www.w3.org/1999/xhtml'>
+	<Annotation><Description>
+			<html:p>This file is an ICH M2 ESTRI maintained code list.  It is encoded using OASIS genericode.More information on ICH technical standards is available via the M2 ESTRI webpages at www.ich.org.</html:p>
+		</Description>
+		<Description><html:p>Authored July 2011 by R. Kupiec / EFPIA on behalf of the ICH M2 ESTRI Expert Working Group.</html:p></Description></Annotation>
+	<Identification>
+		<ShortName>ich-first-sender-of-this-case</ShortName>
+		<LongName>First Sender of this Case</LongName>
+		<Version>1.0</Version>
+		<CanonicalUri>2.16.840.1.113883.3.989.2.1.1.3</CanonicalUri>
+		<CanonicalVersionUri/>
+	</Identification>
+	<ColumnSet>
+	<Column Use="required" Id="code">
+		<ShortName>numeric-code</ShortName>
+		<Data Type="unsignedShort"></Data>
+	</Column>
+	<Column Use="optional" Id="en">
+		<ShortName>english-label</ShortName>
+		<Data Type="string" Lang="en"></Data>
+	</Column>
+	<Column Use="optional" Id="jp">
+			<ShortName>japanese-label</ShortName>
+			<Data Type="string" Lang="jp"/>
+	</Column>
+	</ColumnSet>
+	<SimpleCodeList>
+	<Row>
+		<Value ColumnRef="code"><SimpleValue>1</SimpleValue></Value>
+		<Value ColumnRef="en"><SimpleValue>Regulator</SimpleValue></Value>
+		<Value ColumnRef="jp"><SimpleValue>規制当局</SimpleValue></Value>
+	</Row>
+	<Row>
+		<Value ColumnRef="code"><SimpleValue>2</SimpleValue></Value>
+		<Value ColumnRef="en"><SimpleValue>Other</SimpleValue></Value>
+		<Value ColumnRef="jp"><SimpleValue>その他</SimpleValue></Value>
+	</Row>
+	</SimpleCodeList>
+</gc:CodeList>

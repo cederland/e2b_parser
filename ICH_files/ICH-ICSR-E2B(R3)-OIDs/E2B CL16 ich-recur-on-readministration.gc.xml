@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Mod Crane-gc2html.xsl"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/codelist/ns/genericode/1.0/ genericode.xsd" xmlns:html='http://www.w3.org/1999/xhtml'>
+	<Annotation>
+		<Description>
+			<html:p>This file is an ICH M2 ESTRI maintained code list.  It is encoded using OASIS genericode.More information on ICH technical standards is available via the M2 ESTRI webpages at www.ich.org.</html:p>
+		</Description>
+		<Description><html:p>Authored August 2011 by R. Kupiec / EFPIA on behalf of the ICH M2 ESTRI Expert Working Group.</html:p></Description></Annotation>
+	<Identification>
+		<ShortName>ich-recur-on-readministration</ShortName>
+		<LongName>Did Reaction Recur on Re-administration?</LongName>
+		<Version>1.0</Version>
+		<CanonicalUri>2.16.840.1.113883.3.989.2.1.1.16</CanonicalUri>
+		<CanonicalVersionUri/>
+	</Identification>
+	<ColumnSet>
+	<Column Use="required" Id="code">
+		<ShortName>numeric-code</ShortName>
+		<Data Type="unsignedShort"></Data>
+	</Column>
+	<Column Use="optional" Id="en">
+		<ShortName>english-label</ShortName>
+		<Data Type="string" Lang="en"></Data>
+	</Column>
+	<Column Use="optional" Id="jp">
+		<ShortName>japanese-label</ShortName>
+		<Data Type="string" Lang="jp"/>
+	</Column>
+	</ColumnSet>
+	<SimpleCodeList>
+	<Row>
+		<Value ColumnRef="code"><SimpleValue>1</SimpleValue></Value>
+		<Value ColumnRef="en"><SimpleValue>YES -- YES (rechallenge was done, reaction recurred)</SimpleValue></Value>
+		<Value ColumnRef="jp"><SimpleValue>はい - はい (再投与を行い、副作用が再発した)</SimpleValue></Value>
+	</Row>
+	<Row>
+		<Value ColumnRef="code"><SimpleValue>2</SimpleValue></Value>
+		<Value ColumnRef="en"><SimpleValue>YES -- NO (rechallenge was done, reaction did not recur)</SimpleValue></Value>
+		<Value ColumnRef="jp"><SimpleValue>はい - いいえ (再投与を行ったが、副作用は再発しなかった)</SimpleValue></Value>
+	</Row>
+	<Row>
+		<Value ColumnRef="code"><SimpleValue>3</SimpleValue></Value>
+		<Value ColumnRef="en"><SimpleValue>YES -- UNK (rechallenge was done, outcome unknown)</SimpleValue></Value>
+		<Value ColumnRef="jp"><SimpleValue>はい - 不明 (再投与を行ったが、転帰は不明)</SimpleValue></Value>
+	</Row>
+	<Row>
+		<Value ColumnRef="code"><SimpleValue>4</SimpleValue></Value>
+		<Value ColumnRef="en"><SimpleValue>NO -- N/A (no rechallenge was done, recurrence is not applicable)</SimpleValue></Value>
+		<Value ColumnRef="jp"><SimpleValue>いいえ - 該当なし (再投与は行わなかった、再発は該当せず)</SimpleValue></Value>
+	</Row>
+	</SimpleCodeList>
+</gc:CodeList>
