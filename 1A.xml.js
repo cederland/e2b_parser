@@ -1,4 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+// Load a standard example file if uploading / fetch doesn't work inside main.js
+// Putting it as a variable inside a javascript file to avoid CORS issues
+// and to avoid the need for a server to run the code
+
+const exampleXml =
+`<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <MCCI_IN200100UV01 ITSVersion="XML_1.0" xsi:schemaLocation="urn:hl7-org:v3 http://eudravigilance.ema.europa.eu/XSD/multicacheschemas/MCCI_IN200100UV01.xsd"
 	xmlns="urn:hl7-org:v3"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -776,4 +781,4 @@
 			<id root="2.16.840.1.113883.3.989.2.1.3.13" extension="EVTESTWT"/>
 		</device>
 	</sender>
-</MCCI_IN200100UV01>
+</MCCI_IN200100UV01>`;

@@ -3,24 +3,64 @@
 
 <head>
 	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>E2B Parser</title>
+
 	<link rel="stylesheet" href="style.css">
 	<link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
-	<script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.15/themes/default/style.min.css" />
+          
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gridjs/6.2.0/gridjs.production.min.js" integrity="sha512-UxJx7Aa36ndtmns24kdxG3ARmAPPYllynVsgpV18TdQYGhENGkdb+fC8xOjeJ8UR8Rsc5S2xUZ9pCO5ygECnOQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.15/jstree.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/treejs/1.8.3/tree.min.js" integrity="sha512-ia0SBL/FE7YbHU5Wn4Qxzm12zOgNZ7FOp76oGgi/+34G8KLo9Fa9f9tzGC9injQs75EjxaHq9a7iSoup8k8BAA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
+
 <body>
+	<label for="loadStandardExampleFileButton">Load standard XML-example file</label>
+	<button id="loadStandardExampleFileButton">1A.xml</button>
+
+	<br><br>
+
 	<div id="drop-zone">
 		<div id="help-text">Drop a E2B XML file here</div>
 	</div>
+
 	<div id="search-container">
 		<label id="search-label" for="search-tag">Search Tag:</label>
 		<textarea id="search-tag" placeholder="originalText"></textarea>
 	</div>
+
+	<label for="applyOidButton">Apply OID</label>
+	<button id="applyOidButton">Apply</button>
+
+	<div id="content-container">
+		<div id="tree-container">
+			<h3>Xml Tree</h3>
+			<!-- <pre id="tree-container></pre> -->
+		</div>
+		<div id="selections-container">
+			<h3>Selections</h3>
+			<button id="showSelectedButton">Show Selected</button>
+			<pre id="selections"></pre>
+			<!-- <table id="editedOutputTable"></table> -->
+		</div>
+	</div>
+
+	<pre id="output"></pre>
+
 	<div id="table"></div>
+
+
+	<script src="1A.xml.js"></script>
+	<script src="oidData.js"></script>
 	<script src="e2b.js"></script>
+	<script src="xmlTree.js"></script>
 	<script src="main.js"></script>
 </body>
 
